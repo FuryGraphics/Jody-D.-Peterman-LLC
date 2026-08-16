@@ -145,7 +145,7 @@ export default function PracticeAreaPage({ params }) {
             )}
 
             <div className="mt-8 flex flex-wrap gap-3">
-              <Button href="/contact">Free {pa.title} Case Review</Button>
+              <Button href="/contact">Free {pa.title} Case Evaluation</Button>
               <a
                 href={firm.phoneHref}
                 className="inline-flex items-center gap-2 rounded-full border-2 border-navy px-7 py-3.5 text-sm font-semibold text-navy transition-colors hover:bg-navy hover:text-white"
@@ -172,14 +172,14 @@ export default function PracticeAreaPage({ params }) {
                   Hurt and not sure what to do?
                 </h3>
                 <p className="mt-2 text-sm text-white/75">
-                  Talk to an attorney with 30+ years of experience. Your
-                  consultation is free and you owe nothing unless we win.
+                  Put decades of experience in your corner. For a free case
+                  evaluation, call 229-588-2608 or complete our contact form.
                 </p>
                 <div className="mt-5 space-y-2 text-sm">
                   {[
-                    "No fee unless we win",
-                    "Free, no-obligation review",
-                    "We come to you if needed",
+                    "Free case evaluation",
+                    "We take only a select number of cases",
+                    "More than 100 jury trials tried",
                   ].map((b) => (
                     <div key={b} className="flex items-center gap-2 text-white/85">
                       <Icon name="check" size={16} className="text-gold" />
@@ -188,7 +188,7 @@ export default function PracticeAreaPage({ params }) {
                   ))}
                 </div>
                 <Button href="/contact" className="mt-6 w-full">
-                  Start Your Case Review
+                  Start Your Case Evaluation
                 </Button>
               </div>
             </div>
@@ -217,7 +217,7 @@ export default function PracticeAreaPage({ params }) {
             title: r.title,
             text: r.blurb,
           })),
-          { href: "/contact", title: "Contact Us", text: "Free case review, no obligation." },
+          { href: "/contact", title: "Contact Us", text: "Free case evaluation — we represent clients throughout Georgia." },
         ]}
       />
     </>

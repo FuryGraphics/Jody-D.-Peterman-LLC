@@ -123,14 +123,14 @@ export default function BlogPostPage({ params }) {
           {/* Inline CTA box */}
           <FadeUp className="mt-12 rounded-2xl border border-black/5 bg-navy p-8 text-center text-white">
             <h3 className="font-serif text-2xl font-bold">
-              Injured? Get a free case review.
+              Injured? Get a free case evaluation.
             </h3>
             <p className="mx-auto mt-2 max-w-lg text-white/75">
               Every case is different. Talk to Jody D. Peterman directly — 30+
-              years of experience, and no fee unless we win.
+              years of experience, and a free case evaluation.
             </p>
             <div className="mt-6 flex flex-col justify-center gap-3 sm:flex-row">
-              <Button href="/contact">Free Consultation</Button>
+              <Button href="/contact">Free Case Evaluation</Button>
               <a
                 href={firm.phoneHref}
                 className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white/60 px-7 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-white hover:text-navy"
@@ -172,7 +172,7 @@ export default function BlogPostPage({ params }) {
             ? [{ href: `/blog/${otherPost.slug}`, title: otherPost.title, text: otherPost.excerpt }]
             : []),
           { href: "/practice-areas", title: "Practice Areas", text: "See how we can help." },
-          { href: "/contact", title: "Free Consultation", text: "Start your case review." },
+          { href: "/contact", title: "Free Case Evaluation", text: "Tell us what happened." },
         ]}
       />
     </>

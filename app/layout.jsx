@@ -29,7 +29,7 @@ export const metadata = {
     template: `%s | ${firm.name}`,
   },
   description:
-    "South Georgia personal injury attorney with 30+ years of experience. Car accidents, truck accidents, wrongful death & more. No fee unless we win. Free consultation.",
+    "Valdosta, GA trial attorney handling catastrophic injuries, trucking accidents, wrongful death and serious felony defense. Practicing since 1995. Free case evaluation — call 229-588-2608.",
   icons: { icon: "/favicon.ico" },
 };
 

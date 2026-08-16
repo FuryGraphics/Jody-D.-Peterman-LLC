@@ -110,7 +110,7 @@ export default function LocationsPage() {
         links={[
           { href: "/practice-areas", title: "Practice Areas", text: "The cases we handle." },
           { href: "/about", title: "About the Firm", text: "30+ years of experience." },
-          { href: "/contact", title: "Contact Us", text: "Free consultation today." },
+          { href: "/contact", title: "Contact Us", text: "Free case evaluation today." },
         ]}
       />
     </>

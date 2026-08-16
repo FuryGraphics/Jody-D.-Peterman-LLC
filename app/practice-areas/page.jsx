@@ -48,7 +48,7 @@ export default function PracticeAreasPage() {
         links={[
           { href: "/about", title: "Meet Jody D. Peterman", text: "Practicing since 1995 — 100+ jury trials." },
           { href: "/locations", title: "Service Areas", text: "Communities we serve across South Georgia." },
-          { href: "/contact", title: "Free Case Review", text: "Tell us what happened." },
+          { href: "/contact", title: "Free Case Evaluation", text: "Tell us what happened." },
         ]}
       />
     </>

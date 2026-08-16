@@ -74,7 +74,7 @@ export default function HomePage() {
 
             <div className="mt-9 flex flex-col gap-4 sm:flex-row sm:items-center">
               <Button href="/contact" className="px-9 py-4 text-base">
-                Get Your Free Case Review
+                Get Your Free Case Evaluation
               </Button>
               <a
                 href={firm.phoneHref}
@@ -95,7 +95,7 @@ export default function HomePage() {
             { n: "1995", l: "Practicing Since" },
             { n: "100+", l: "Jury Trials Tried" },
             { n: "AV", l: "Martindale-Hubbell Rated" },
-            { n: "$0", l: "Fee Unless We Win" },
+            { n: "Free", l: "Case Evaluation" },
           ].map((s, i) => (
             <FadeUp key={s.l} delay={i * 0.08}>
               <div className="font-serif text-3xl font-bold text-gold md:text-4xl">
@@ -116,8 +116,8 @@ export default function HomePage() {
       <WhereWeServe />
       <ReviewsSection />
       <CtaBanner
-        heading="Don't settle for less than your case is worth."
-        text="Insurance companies have teams of lawyers. Shouldn't you? Get a free, no-pressure case review today."
+        heading="Aggressive representation when the stakes are high."
+        text="We take only a select number of cases, so our clients get the focus these matters require. Call 229-588-2608 for a free case evaluation."
       />
       <FAQ faqs={globalFaqs} />
       <FindUs />
@@ -130,12 +130,12 @@ export default function HomePage() {
               Ready to talk? So are we.
             </h2>
             <p className="mx-auto mt-3 max-w-xl text-white/75">
-              No fee unless we win. Free consultation. Call now or send us a
-              message and we'll respond right away.
+              For a free case evaluation, call us at 229-588-2608 or complete
+              our contact form. We represent clients throughout Georgia.
             </p>
             <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
               <Button href="/contact" className="px-9 py-4 text-base">
-                Free Consultation
+                Free Case Evaluation
               </Button>
               <a
                 href={firm.phoneHref}

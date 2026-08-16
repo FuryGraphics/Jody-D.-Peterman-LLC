@@ -128,7 +128,7 @@ export default function BlogPage() {
         links={[
           { href: "/practice-areas", title: "Practice Areas", text: "See how we can help." },
           { href: "/about", title: "About the Firm", text: "Meet Jody D. Peterman." },
-          { href: "/contact", title: "Free Consultation", text: "Talk to us today." },
+          { href: "/contact", title: "Free Case Evaluation", text: "Talk to us today." },
         ]}
       />
     </>

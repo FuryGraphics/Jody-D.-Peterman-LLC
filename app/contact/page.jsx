@@ -10,7 +10,7 @@ import { Icon } from "@/components/Icons";
 import { PageHero, RelatedLinks, TrustBadgeRow } from "@/components/sections";
 
 export const metadata = buildMetadata({
-  title: "Contact Us — Free Consultation",
+  title: "Contact Us — Free Case Evaluation",
   description:
     "Contact Jody D. Peterman, LLC at 304 N. Ashley Street in Valdosta, GA. Call 229-588-2608 for a free case evaluation. We represent clients throughout Georgia.",
   path: "/contact",
@@ -27,9 +27,9 @@ export default function ContactPage() {
         ]}
       />
       <PageHero
-        eyebrow="Free Consultation"
+        eyebrow="Free Case Evaluation"
         title="Let's Talk About Your Case"
-        subtitle="Reach out any time — day or night. Your consultation is free, confidential, and comes with no obligation."
+        subtitle="For a free case evaluation, please call us at 229-588-2608 or complete our contact form. We represent clients throughout Georgia."
         image="https://images.unsplash.com/photo-1423666639041-f56000c27a9a?auto=format&fit=crop&w=1600&q=70"
       />
 

@@ -108,7 +108,7 @@ export default function ContactForm() {
         type="submit"
         className="mt-6 flex w-full items-center justify-center gap-2 rounded-full bg-gold py-4 text-base font-semibold text-navy transition-colors hover:bg-gold-light"
       >
-        Request My Free Consultation
+        Request My Free Case Evaluation
         <Icon name="arrow" size={18} />
       </button>
       <p className="mt-4 text-center text-xs text-navy/50">

@@ -197,7 +197,7 @@ export default function Header() {
             href="/contact"
             className="rounded-full bg-gold px-5 py-2.5 text-sm font-semibold text-navy transition-colors hover:bg-gold-light"
           >
-            Free Consultation
+            Free Case Evaluation
           </Link>
         </div>
 
@@ -349,7 +349,7 @@ export default function Header() {
                 href="/contact"
                 className="rounded-full bg-gold py-3 text-center text-sm font-semibold text-navy"
               >
-                Free Consultation
+                Free Case Evaluation
               </Link>
             </div>
             {/* Cities in mobile */}

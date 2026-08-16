@@ -50,8 +50,8 @@ const values = [
   },
   {
     icon: "shield",
-    title: "No Fee Unless We Win",
-    text: "You pay nothing upfront and no attorney's fee at all unless we recover compensation for you. The risk is ours, not yours.",
+    title: "Decades in Your Corner",
+    text: "Put decades of experience in your corner. We focus exclusively on pivotal cases involving serious felony charges, catastrophic injuries, trucking accidents and wrongful death.",
   },
 ];
 
@@ -183,7 +183,7 @@ export default function AboutPage() {
             </div>
 
             <div className="mt-8 flex flex-wrap gap-3">
-              <Button href="/contact">Schedule a Free Consultation</Button>
+              <Button href="/contact">Request a Free Case Evaluation</Button>
               <Button href="/practice-areas" variant="outline">
                 See How We Can Help
               </Button>
@@ -224,8 +224,8 @@ export default function AboutPage() {
       <TestimonialsSection />
 
       <CtaBanner
-        heading="Let's discuss your case — free of charge."
-        text="Get honest answers from an attorney with 30+ years of experience. No pressure, no obligation."
+        heading="Let's talk about your case."
+        text="Send an email inquiry or call Jody D. Peterman, LLC, in Valdosta at 229-588-2608 to make arrangements to speak to our attorney."
       />
 
       <FAQ faqs={globalFaqs} />
@@ -235,7 +235,7 @@ export default function AboutPage() {
         links={[
           { href: "/practice-areas", title: "Practice Areas", text: "See the cases we handle." },
           { href: "/locations/valdosta", title: "Valdosta Office", text: "304 N. Ashley Street — our home base." },
-          { href: "/contact", title: "Contact Us", text: "Start your free case review." },
+          { href: "/contact", title: "Contact Us", text: "Start your free case evaluation." },
         ]}
       />
     </>

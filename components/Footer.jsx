@@ -32,7 +32,7 @@ export default function Footer() {
           </div>
           <p className="text-sm leading-relaxed">
             For more than 30 years, we've fought for injured people across South
-            Georgia. No fee unless we win — and a free consultation, always.
+            Georgia. Call 229-588-2608 for a free case evaluation.
           </p>
           <a
             href={firm.phoneHref}

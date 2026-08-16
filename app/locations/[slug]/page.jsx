@@ -24,7 +24,7 @@ export function generateMetadata({ params }) {
   if (!loc) return {};
   return buildMetadata({
     title: `${loc.city}, GA Personal Injury Lawyer`,
-    description: `Injured in ${loc.city}, ${loc.county}? Jody D. Peterman, LLC has 30+ years winning injury cases in South Georgia. Free consultation, no fee unless we win.`.slice(0, 158),
+    description: `Serving ${loc.city} and ${loc.county} from our Valdosta office — catastrophic injury, trucking, wrongful death and serious felony cases. Free case evaluation: 229-588-2608.`.slice(0, 158),
     path: `/locations/${loc.slug}`,
     image: loc.image,
   });
@@ -97,7 +97,7 @@ export default function LocationPage({ params }) {
             </div>
 
             <div className="mt-8 flex flex-wrap gap-3">
-              <Button href="/contact">Free {loc.city} Case Review</Button>
+              <Button href="/contact">Free {loc.city} Case Evaluation</Button>
               <a
                 href={office.phoneHref}
                 className="inline-flex items-center gap-2 rounded-full border-2 border-navy px-7 py-3.5 text-sm font-semibold text-navy transition-colors hover:bg-navy hover:text-white"
@@ -160,7 +160,7 @@ export default function LocationPage({ params }) {
       />
       <CtaBanner
         heading={`Injured in ${loc.city}? We're ready to help.`}
-        text="Reach out for a free, no-obligation consultation with an attorney who knows South Georgia."
+        text="For a free case evaluation, call 229-588-2608 or complete our contact form. We represent clients throughout Georgia."
       />
       <ReviewsSection />
       <FAQ faqs={localFaqs} title={`${loc.city} — Frequently Asked Questions`} />
@@ -177,7 +177,7 @@ export default function LocationPage({ params }) {
             title: "Other Service Areas",
             text: "See more South Georgia communities.",
           },
-          { href: "/contact", title: "Contact Us", text: "Start your free case review." },
+          { href: "/contact", title: "Contact Us", text: "Start your free case evaluation." },
         ]}
       />
     </>

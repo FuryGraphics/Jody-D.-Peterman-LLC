@@ -5,7 +5,7 @@ import Link from "next/link";
 import { firm } from "@/lib/site";
 import { Icon } from "./Icons";
 
-// Floating "Call Now" + "Free Case Review" widget, bottom-right, every page.
+// Floating "Call Now" + "Free Case Evaluation" widget, bottom-right, every page.
 export default function FloatingButtons() {
   const [open, setOpen] = useState(false);
   return (
@@ -15,7 +15,7 @@ export default function FloatingButtons() {
         <div className="fixed bottom-24 right-4 z-[60] w-[300px] max-w-[calc(100vw-2rem)] rounded-2xl border border-black/5 bg-white p-5 shadow-card md:bottom-6 md:right-24">
           <div className="mb-2 flex items-center justify-between">
             <span className="font-serif text-lg font-bold text-navy">
-              Free Case Review
+              Free Case Evaluation
             </span>
             <button
               onClick={() => setOpen(false)}
@@ -33,8 +33,8 @@ export default function FloatingButtons() {
             </button>
           </div>
           <p className="mb-4 text-sm text-navy/70">
-            Tell us what happened. We'll review your case at no cost — no fee
-            unless we win.
+            Tell us what happened. For a free case evaluation, call
+            229-588-2608 or send us a message.
           </p>
           <a
             href={firm.phoneHref}
@@ -58,7 +58,7 @@ export default function FloatingButtons() {
         <button
           onClick={() => setOpen((v) => !v)}
           className="flex h-14 w-14 items-center justify-center rounded-full bg-navy text-gold shadow-card transition-transform hover:scale-105"
-          aria-label="Free case review"
+          aria-label="Free case evaluation"
         >
           <Icon name="chat" size={26} />
         </button>

@@ -39,7 +39,7 @@ export function TrustBadgeRow({ items = trustBadges, dark = true }) {
 // ---- Mid-page full-width CTA banner ----------------------------------------
 export function CtaBanner({
   heading = "Injured in an accident? Let's talk today.",
-  text = "Your consultation is free and you owe nothing unless we win. Find out what your case is really worth.",
+  text = "Put decades of experience in your corner. For a free case evaluation, call 229-588-2608 or complete our contact form.",
   withBadges = false,
 }) {
   return (
@@ -61,7 +61,7 @@ export function CtaBanner({
             <p className="mt-3 text-white/75">{text}</p>
           </div>
           <div className="flex flex-none flex-col gap-3 sm:flex-row">
-            <Button href="/contact">Free Consultation</Button>
+            <Button href="/contact">Free Case Evaluation</Button>
             <a
               href={firm.phoneHref}
               className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white/60 px-7 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-white hover:text-navy"
@@ -248,7 +248,7 @@ export function StoryBlock() {
           <p className="mt-4 text-navy/75">
             We handle only a select number of personal injury claims, so our
             clients get the focus and personal attention these complex cases
-            require — and in injury matters you never pay a fee unless we win.
+            require.
           </p>
           <div className="mt-7 flex flex-wrap gap-3">
             <Button href="/about">Meet Jody D. Peterman</Button>
@@ -504,7 +504,7 @@ export function PageHero({
           {showBadges && (
             <div className="mt-7">
               <TrustBadgeRow
-                items={["No Fee Unless We Win", "Free Consultation", "30+ Years Experience"]}
+                items={["Free Case Evaluation", "100+ Jury Trials", "Practicing Since 1995"]}
               />
             </div>
           )}
