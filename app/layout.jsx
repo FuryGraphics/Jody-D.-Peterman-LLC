@@ -56,6 +56,14 @@ export default function RootLayout({ children }) {
         <main>{children}</main>
         <Footer />
         <FloatingButtons />
+
+        {/* LeadConnector chat widget */}
+        <Script
+          src="https://widgets.leadconnectorhq.com/loader.js"
+          data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
+          data-widget-id="6a7c42be93aa928cd274f202"
+          strategy="lazyOnload"
+        />
       </body>
     </html>
   );
