@@ -30,7 +30,7 @@ export const metadata = {
   },
   description:
     "Valdosta, GA trial attorney handling catastrophic injuries, trucking accidents, wrongful death and serious felony defense. Practicing since 1995. Free case evaluation — call 229-588-2608.",
-  icons: { icon: "/favicon.ico" },
+  // Favicon is provided by the app/icon.svg file convention.
 };
 
 export default function RootLayout({ children }) {
