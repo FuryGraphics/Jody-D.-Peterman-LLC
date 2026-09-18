@@ -5,6 +5,7 @@ import {
   attorneyBio,
   credentials,
   pressMentions,
+  partners,
 } from "@/lib/site";
 import {
   buildMetadata,
@@ -23,12 +24,13 @@ import {
   RelatedLinks,
   TrustBadgeRow,
   TestimonialsSection,
+  AwardsBand,
 } from "@/components/sections";
 
 export const metadata = buildMetadata({
   title: "About Attorney Jody D. Peterman",
   description:
-    "Meet Jody Donald Peterman — a Valdosta, GA trial attorney practicing since 1995, with more than 100 jury trials, an AV rating from Martindale-Hubbell® and a Top 100 Georgia Trial Lawyers honor.",
+    "Meet the Jody D. Peterman, LLC trial team — Jody Peterman, Stephen Delk and Mike Burke — Valdosta, GA attorneys with 200+ jury trials and 2027 Super Lawyers® honors.",
   path: "/about",
 });
 
@@ -69,7 +71,7 @@ export default function AboutPage() {
         eyebrow="Meet Your Attorney"
         title="Jody Donald Peterman"
         subtitle="A fierce litigator securing outstanding results for clients since 1995."
-        image="https://images.unsplash.com/photo-1505664194779-8beaceb93744?auto=format&fit=crop&w=1600&q=70"
+        image="/images/u-1505664194779-1600.jpg"
       />
 
       {/* Bio */}
@@ -86,18 +88,27 @@ export default function AboutPage() {
                 className="h-full w-full object-cover object-top"
               />
             </div>
-            <div className="mt-6 rounded-2xl bg-navy p-6 text-center text-white">
-              <div className="font-serif text-3xl font-bold text-gold">30+</div>
-              <div className="text-xs font-semibold uppercase tracking-wider text-white/80">
-                Years Serving South Georgia
+            <div className="mt-6 flex flex-col items-center gap-5 rounded-2xl bg-navy p-6 text-white sm:flex-row sm:text-left">
+              <Image
+                src="/sl-2027-peterman.webp"
+                alt="Rated by Super Lawyers — Jody D. Peterman — 2027"
+                width={180}
+                height={198}
+                className="h-auto w-36 flex-none drop-shadow-md sm:w-40"
+              />
+              <div className="flex-1 text-center sm:text-left">
+                <div className="font-serif text-3xl font-bold text-gold">30+</div>
+                <div className="text-xs font-semibold uppercase tracking-wider text-white/80">
+                  Years Serving South Georgia
+                </div>
+                <a
+                  href={firm.phoneHref}
+                  className="mt-4 inline-flex items-center gap-2 rounded-full bg-gold px-5 py-2.5 text-sm font-semibold text-navy hover:bg-gold-light"
+                >
+                  <Icon name="phone" size={16} />
+                  {firm.phone}
+                </a>
               </div>
-              <a
-                href={firm.phoneHref}
-                className="mt-4 inline-flex items-center gap-2 rounded-full bg-gold px-5 py-2.5 text-sm font-semibold text-navy hover:bg-gold-light"
-              >
-                <Icon name="phone" size={16} />
-                {firm.phone}
-              </a>
             </div>
           </FadeUp>
 
@@ -189,6 +200,133 @@ export default function AboutPage() {
               </Button>
             </div>
           </FadeUp>
+        </div>
+      </section>
+
+      {/* Prominent Super Lawyers® awards band */}
+      <AwardsBand />
+
+      {/* Meet Our Attorneys — partners */}
+      <section className="border-t border-black/5 bg-white py-20">
+        <div className="mx-auto max-w-container px-4 md:px-6">
+          <FadeUp className="mb-12 text-center">
+            <Eyebrow>Our Trial Team</Eyebrow>
+            <Heading center>Meet the Attorneys</Heading>
+            <GoldRule center />
+            <p className="mx-auto max-w-2xl text-navy/70">
+              Jody is joined by two partners who spent their careers on the
+              defense side — and now bring that insider knowledge to injured
+              South Georgians.
+            </p>
+          </FadeUp>
+
+          <div className="space-y-8">
+            {partners.map((atty, i) => (
+              <FadeUp
+                key={atty.id}
+                delay={i * 0.1}
+                className="overflow-hidden rounded-3xl border border-black/5 bg-white shadow-soft"
+              >
+                <div className="grid gap-0 lg:grid-cols-[300px_1fr]">
+                  {/* Photo column */}
+                  <div className="flex flex-col items-center justify-center gap-4 bg-navy p-8 text-center text-white">
+                    {atty.image ? (
+                      <div className="h-44 w-36 overflow-hidden rounded-2xl border-2 border-gold/40">
+                        <Image
+                          src={atty.image}
+                          alt={`Attorney ${atty.name.replace(/"/g, "")}`}
+                          width={300}
+                          height={400}
+                          loading="lazy"
+                          className="h-full w-full object-cover object-top"
+                        />
+                      </div>
+                    ) : (
+                      <span className="flex h-24 w-24 items-center justify-center rounded-full bg-gold font-serif text-3xl font-bold text-navy">
+                        {atty.name
+                          .replace(/"/g, "")
+                          .split(" ")
+                          .filter((w) => /^[A-Z]/.test(w))
+                          .slice(0, 2)
+                          .map((w) => w[0])
+                          .join("")}
+                      </span>
+                    )}
+                    <div>
+                      <h3 className="font-serif text-xl font-bold">{atty.name}</h3>
+                      <div className="mt-1 text-xs font-semibold uppercase tracking-wider text-gold-light">
+                        {atty.title}
+                      </div>
+                      <div className="mt-1 text-sm text-white/70">{atty.focus}</div>
+                    </div>
+                    {atty.badge && (
+                      <Image
+                        src={atty.badge}
+                        alt={`Rated by Super Lawyers — ${atty.name.replace(/"/g, "")} — 2027`}
+                        width={150}
+                        height={165}
+                        loading="lazy"
+                        className="mt-1 h-auto w-[84px]"
+                      />
+                    )}
+                  </div>
+
+                  {/* Bio + credentials */}
+                  <div className="p-8 md:p-10">
+                    <div className="space-y-3 text-navy/75">
+                      {atty.bio.map((p) => (
+                        <p key={p.slice(0, 40)}>{p}</p>
+                      ))}
+                    </div>
+
+                    <div className="mt-6 grid gap-6 sm:grid-cols-3">
+                      <div>
+                        <h4 className="mb-2 text-xs font-semibold uppercase tracking-wide text-gold-dark">
+                          Honors
+                        </h4>
+                        <ul className="space-y-1.5 text-sm text-navy/70">
+                          {atty.honors.map((h) => (
+                            <li key={h} className="flex items-start gap-1.5">
+                              <Icon name="check" size={15} className="mt-0.5 flex-none text-gold-dark" />
+                              {h}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                      <div>
+                        <h4 className="mb-2 text-xs font-semibold uppercase tracking-wide text-gold-dark">
+                          Education
+                        </h4>
+                        <ul className="space-y-1.5 text-sm text-navy/70">
+                          {atty.education.map((e) => (
+                            <li key={e} className="flex items-start gap-1.5">
+                              <Icon name="check" size={15} className="mt-0.5 flex-none text-gold-dark" />
+                              {e}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                      <div>
+                        <h4 className="mb-2 text-xs font-semibold uppercase tracking-wide text-gold-dark">
+                          Focus Areas
+                        </h4>
+                        <div className="flex flex-wrap gap-1.5">
+                          {atty.practiceAreas.map((pa) => (
+                            <span
+                              key={pa}
+                              className="rounded-full border border-navy/10 bg-warm px-2.5 py-1 text-xs text-navy/70"
+                            >
+                              {pa}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </FadeUp>
+            ))}
+          </div>
         </div>
       </section>
 

@@ -179,7 +179,7 @@ export default function PracticeAreaPage({ params }) {
                   {[
                     "Free case evaluation",
                     "We take only a select number of cases",
-                    "More than 100 jury trials tried",
+                    "More than 200 jury trials tried",
                   ].map((b) => (
                     <div key={b} className="flex items-center gap-2 text-white/85">
                       <Icon name="check" size={16} className="text-gold" />

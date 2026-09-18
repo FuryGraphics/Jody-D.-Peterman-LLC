@@ -31,7 +31,7 @@ export default function LocationsPage() {
         eyebrow="Where We Serve"
         title="Serving All of South Georgia"
         subtitle="From our office at 304 N. Ashley Street in Valdosta, we represent clients across South Georgia and statewide — and we'll come to you when you can't come to us."
-        image="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=1600&q=70"
+        image="/images/u-1524661135-1600.jpg"
       />
 
       <section className="bg-white py-20">

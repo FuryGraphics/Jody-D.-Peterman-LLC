@@ -37,7 +37,7 @@ export default function BlogPage() {
         eyebrow="Legal Resources"
         title="Injury Law, Explained"
         subtitle="Straightforward answers to the questions injured South Georgians ask us most."
-        image="https://images.unsplash.com/photo-1457369804613-52c61a468e7d?auto=format&fit=crop&w=1600&q=70"
+        image="/images/u-1457369804613-1600.jpg"
       />
 
       <section className="bg-white py-20">

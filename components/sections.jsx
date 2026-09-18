@@ -10,6 +10,7 @@ import {
   googleRating,
   howItWorks,
   trustBadges,
+  superLawyers,
   servedCities,
   locations,
 } from "@/lib/site";
@@ -33,6 +34,44 @@ export function TrustBadgeRow({ items = trustBadges, dark = true }) {
         </span>
       ))}
     </div>
+  );
+}
+
+// ---- Prominent awards / recognition band -----------------------------------
+export function AwardsBand() {
+  return (
+    <section className="bg-warm py-16">
+      <div className="mx-auto max-w-container px-4 md:px-6">
+        <FadeUp className="mb-10 text-center">
+          <Eyebrow>Awards &amp; Recognition</Eyebrow>
+          <Heading center>Selected to the {superLawyers.year} Super Lawyers® List</Heading>
+          <GoldRule center />
+          <p className="mx-auto max-w-2xl text-navy/70">
+            All three attorneys at {firm.name} were selected to Super Lawyers® in{" "}
+            {superLawyers.year} — a distinction given to no more than 5% of the
+            attorneys in Georgia.
+          </p>
+        </FadeUp>
+        <div className="flex flex-wrap items-end justify-center gap-8 sm:gap-12">
+          {superLawyers.recipients.map((r, i) => (
+            <FadeUp
+              key={r.name}
+              delay={i * 0.1}
+              className="flex flex-col items-center"
+            >
+              <Image
+                src={r.badge}
+                alt={`Rated by Super Lawyers — ${r.name} — ${superLawyers.year}`}
+                width={180}
+                height={200}
+                loading="lazy"
+                className="h-auto w-[130px] drop-shadow-sm transition-transform duration-300 hover:-translate-y-1 sm:w-[150px]"
+              />
+            </FadeUp>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 }
 
@@ -239,7 +278,7 @@ export function StoryBlock() {
           <p className="text-navy/75">
             Attorney Jody D. Peterman has been serving clients across the
             Valdosta area and all of Georgia since 1995. He is a trial lawyer
-            who has represented clients in more than 100 jury trials, and he has
+            who has represented clients in more than 200 jury trials, and he has
             a well-established reputation among past clients and legal peers as
             an assertive, intelligent and authoritative litigator with a long
             record of success — including the reduction and dismissal of serious
@@ -477,7 +516,7 @@ export function PageHero({
   eyebrow,
   title,
   subtitle,
-  image = "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1600&q=70",
+  image = "/images/u-1450101499163-1600.jpg",
   showBadges = false,
 }) {
   return (
@@ -504,7 +543,7 @@ export function PageHero({
           {showBadges && (
             <div className="mt-7">
               <TrustBadgeRow
-                items={["Free Case Evaluation", "100+ Jury Trials", "Practicing Since 1995"]}
+                items={["Free Case Evaluation", "200+ jury trials", "Practicing Since 1995"]}
               />
             </div>
           )}

@@ -30,7 +30,7 @@ export default function ContactPage() {
         eyebrow="Free Case Evaluation"
         title="Let's Talk About Your Case"
         subtitle="For a free case evaluation, please call us at 229-588-2608 or complete our contact form. We represent clients throughout Georgia."
-        image="https://images.unsplash.com/photo-1423666639041-f56000c27a9a?auto=format&fit=crop&w=1600&q=70"
+        image="/images/u-1423666639041-1600.jpg"
       />
 
       <section className="bg-white py-20">

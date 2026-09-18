@@ -14,12 +14,13 @@ import {
   WhereWeServe,
   CtaBanner,
   TrustBadgeRow,
+  AwardsBand,
 } from "@/components/sections";
 
 export const metadata = buildMetadata({
   title: "Valdosta Personal Injury & Criminal Defense Lawyer",
   description:
-    "Jody D. Peterman, LLC in Valdosta, GA — a trial attorney with 100+ jury trials since 1995 handling catastrophic injury, trucking, wrongful death and serious felony cases. Call 229-588-2608.",
+    "Jody D. Peterman, LLC in Valdosta, GA — a trial attorney with 200+ jury trials since 1995 handling catastrophic injury, trucking, wrongful death and serious felony cases. Call 229-588-2608.",
   path: "/",
 });
 
@@ -32,7 +33,7 @@ export default function HomePage() {
       {/* HERO */}
       <section className="relative flex min-h-[92vh] items-center overflow-hidden">
         <Image
-          src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1920&q=75"
+          src="/images/u-1521791136064-1920.jpg"
           alt="Attorney shaking hands with a client at Jody D. Peterman, LLC"
           fill
           priority
@@ -93,7 +94,7 @@ export default function HomePage() {
         <div className="mx-auto grid max-w-container grid-cols-2 gap-6 px-4 text-center md:grid-cols-4 md:px-6">
           {[
             { n: "1995", l: "Practicing Since" },
-            { n: "100+", l: "Jury Trials Tried" },
+            { n: "200+", l: "Jury Trials Tried" },
             { n: "AV", l: "Martindale-Hubbell Rated" },
             { n: "Free", l: "Case Evaluation" },
           ].map((s, i) => (
@@ -109,6 +110,7 @@ export default function HomePage() {
         </div>
       </section>
 
+      <AwardsBand />
       <PracticeGrid />
       <CtaBanner />
       <StoryBlock />

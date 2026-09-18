@@ -31,8 +31,8 @@ export default function PracticeAreasPage() {
       <PageHero
         eyebrow="What We Handle"
         title="Our Practice Areas"
-        subtitle="Serious injury, wrongful death and serious felony defense — handled by a trial attorney with more than 100 jury trials behind him."
-        image="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1600&q=70"
+        subtitle="Serious injury, wrongful death and serious felony defense — handled by a trial attorney with more than 200 jury trials behind him."
+        image="/images/u-1589829545856-1600.jpg"
       />
       <PracticeGrid
         eyebrow="Areas of Practice"
@@ -46,7 +46,7 @@ export default function PracticeAreasPage() {
       <RelatedLinks
         title="Learn More"
         links={[
-          { href: "/about", title: "Meet Jody D. Peterman", text: "Practicing since 1995 — 100+ jury trials." },
+          { href: "/about", title: "Meet Jody D. Peterman", text: "Practicing since 1995 — 200+ jury trials." },
           { href: "/locations", title: "Service Areas", text: "Communities we serve across South Georgia." },
           { href: "/contact", title: "Free Case Evaluation", text: "Tell us what happened." },
         ]}
